@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'minitest/autorun'
-require 'minitest/pride'
 require 'test/unit'
 require 'mocha/setup'
 require 'mail_logger'
