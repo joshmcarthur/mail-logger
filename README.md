@@ -25,7 +25,7 @@ end
 
 Add this line to your application's Gemfile:
 
-    gem 'mail_logger'
+    gem 'mail-logger'
 
 And then execute:
 
@@ -33,7 +33,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install email_logger
+    $ gem install mail-logger
     
    
 
