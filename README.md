@@ -1,6 +1,6 @@
 # MailLogger
 
-[![Build Status](https://travis-ci.org/joshmcarthur/mail_logger.png?branch=master)](https://travis-ci.org/joshmcarthur/mail_logger)
+[![Build Status](https://travis-ci.org/joshmcarthur/mail-logger.png?branch=master)](https://travis-ci.org/joshmcarthur/mail-logger)
 
 > Please note: There's another project around called [**mail_logger**](https://rubygems.org/gems/mail_logger), which records details of mail to the database via ActiveRecord, instead of a log file (which is what this project does). While I certainly didn't intend to infringe, the other project hasn't been updated in a few years, so I'm sticking with this name.
 
