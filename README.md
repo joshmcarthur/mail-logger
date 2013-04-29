@@ -2,7 +2,9 @@
 
 [![Build Status](https://travis-ci.org/joshmcarthur/mail_logger.png?branch=master)](https://travis-ci.org/joshmcarthur/mail_logger)
 
-You know how you're looking through your logs to see how your mailing is doing, and after all that request rubbish, you just can't see that **Sent mail** stuff? Annoying, right? 
+> Please note: There's another project around called [**mail_logger**](https://rubygems.org/gems/mail_logger), which records details of mail to the database via ActiveRecord, instead of a log file (which is what this project does). While I certainly didn't intend to infringe, the other project hasn't been updated in a few years, so I'm sticking with this name.
+
+You know how you're looking through your logs to see how your mailing is doing, and after all that request rubbish, you just can't see that **Sent mail** stuff? Annoying, right?
 
 MailLogger to the rescue! It lodges a callback with `Mail`, capturing all of the mail being sent, and logging it to it's own file, so you can simply look back through that file to see what's up. Easy peasy!
 
@@ -32,7 +34,8 @@ And then execute:
 Or install it yourself as:
 
     $ gem install email_logger
-
+    
+   
 
 ## Contributing
 
