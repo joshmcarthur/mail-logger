@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Mail::Logger::VERSION
   spec.authors       = ["Josh McArthur"]
   spec.email         = ["joshua.mcarthur@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Lodges a callback with `Mail`, capturing all of the mail being sent, and logging it to it's own file, so you can simply look back through that file to see what's up. }
+  spec.summary       = %q{A Rubygem to capture information about sent emails, and log them to a file all to their own!}
+  spec.homepage      = "https://github.com/joshmcarthur/mail_logger"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -20,6 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler"
   spec.add_development_dependency 'mocha', '~> 0.13.3'
+  spec.add_development_dependency 'minitest'
   spec.add_development_dependency "rake"
   spec.add_dependency "mail"
 end
