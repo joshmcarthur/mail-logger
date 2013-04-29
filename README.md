@@ -1,12 +1,27 @@
-# EmailLogger
+# MailLogger
 
-TODO: Write a gem description
+You know how you're looking through your logs to see how your mailing is doing, and after all that request rubbish, you just can't see that **Sent mail** stuff? Annoying, right? 
+
+MailLogger to the rescue! It lodges a callback with `Mail`, capturing all of the mail being sent, and logging it to it's own file, so you can simply look back through that file to see what's up. Easy peasy!
+
+I could be a pain and require Rails here, but I don't. If you are using Rails, then this gem should put things in the right place: `#{Rails.root}/log/mail_{development,etc}.log` - no extra work necessary. If you are not using Rails, then the gem will place the log file in `./log` - wherever that may be.
+
+Default paths getting you down? Not to worry, this gem is configurable!
+
+``` ruby
+Mail::Logger.configure do |config|
+  config.log_path = "Whatever you want"
+  config.log_file_name = "all my emails.log"
+end
+```
+
+(If you're using Rails, this belongs in `config/initializers/mail_logger.rb`)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'email_logger'
+    gem 'mail_logger'
 
 And then execute:
 
@@ -16,9 +31,6 @@ Or install it yourself as:
 
     $ gem install email_logger
 
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
