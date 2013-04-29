@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'mail/logger/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "email_logger"
+  spec.name          = "mail-logger"
   spec.version       = Mail::Logger::VERSION
   spec.authors       = ["Josh McArthur"]
   spec.email         = ["joshua.mcarthur@gmail.com"]
