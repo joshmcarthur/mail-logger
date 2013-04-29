@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+  - 2.0
+  - 1.9.3
+  - 1.9.2
+  - rbx-19mode
+  - jruby
+  - ruby-head
+script:
+  - bundle exec rake
