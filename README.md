@@ -1,5 +1,7 @@
 # MailLogger
 
+[![Build Status](https://travis-ci.org/joshmcarthur/mail_logger.png?branch=master)](https://travis-ci.org/joshmcarthur/mail_logger)
+
 You know how you're looking through your logs to see how your mailing is doing, and after all that request rubbish, you just can't see that **Sent mail** stuff? Annoying, right? 
 
 MailLogger to the rescue! It lodges a callback with `Mail`, capturing all of the mail being sent, and logging it to it's own file, so you can simply look back through that file to see what's up. Easy peasy!
