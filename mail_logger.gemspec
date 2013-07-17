@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler"
   spec.add_development_dependency 'mocha', '~> 0.13.3'
-  spec.add_development_dependency 'minitest'
+  spec.add_development_dependency 'minitest', '~> 4.7.3'
   spec.add_development_dependency "rake"
   spec.add_dependency "mail"
 end
