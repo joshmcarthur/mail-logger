@@ -9,7 +9,7 @@ class Mail::Logger::Configuration
   def rails_log_path
     return nil unless defined? Rails
 
-    Rails.root
+    Rails.root.join("log")
   end
 
   def rails_log_file_name
