@@ -3,7 +3,7 @@ require 'bundler/setup'
 require 'minitest/autorun'
 require 'test/unit'
 require 'mocha/setup'
-require 'mail_logger'
+require 'mail-logger'
 
 Mail::Logger.configure do |config|
   config.log_path = File.expand_path("./test/log")
