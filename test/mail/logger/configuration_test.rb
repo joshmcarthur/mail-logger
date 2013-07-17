@@ -9,7 +9,7 @@ describe Mail::Logger::Configuration do
         end
 
         def self.root
-            "log"
+            Pathname.new(".")
           end
       end
     end
@@ -23,7 +23,7 @@ describe Mail::Logger::Configuration do
     end
 
     it "Uses the Rails log folder as its path" do
-      subject.log_path.must_equal "log"
+      subject.log_path.to_s.must_equal "log"
     end
 
     it "Uses the Rails environment to name the file" do
