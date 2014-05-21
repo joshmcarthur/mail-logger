@@ -3,11 +3,8 @@ rvm:
   - 2.0
   - 1.9.3
   - 1.9.2
-  - rbx-19mode
+  - rbx
   - jruby
   - ruby-head
-matrix:
-  allow_failures:
-    - rvm: ruby-head
 script:
   - bundle exec rake
