@@ -4,5 +4,7 @@ class Mail::Logger::Logfile < ::Logger
     filename =  Mail::Logger.configuration.log_file_name
 
     super(File.open(File.join(path, filename), 'a+'))
+    logfile = File.open(File.join(path, filename), 'a+')
+    logfile.sync = true
   end
 end
