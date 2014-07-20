@@ -14,6 +14,12 @@ describe Mail::Logger::Callback do
       Mail::Logger.logger.expects(:info).with(subject.inspect).returns(true)
       Mail::Logger::Callback.delivered_email(subject)
     end
+
+    it "custom log message" do
+      Mail::Logger.configuration.message_inspect = Proc.new { |e| e.header.to_s }
+      Mail::Logger.logger.expects(:info).with(subject.header.to_s).returns(true)
+      Mail::Logger::Callback.delivered_email(subject)
+    end
   end
 
   describe "Callback registration" do
