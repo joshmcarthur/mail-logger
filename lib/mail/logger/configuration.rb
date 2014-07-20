@@ -1,5 +1,5 @@
 class Mail::Logger::Configuration
-  attr_accessor :log_path, :log_file_name
+  attr_accessor :log_path, :log_file_name, :message_inspect
 
   def initialize
     self.log_path = rails_log_path || File.expand_path("./log")
