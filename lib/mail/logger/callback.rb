@@ -3,17 +3,21 @@ class Mail::Logger::Callback
 
   def self.delivered_email(email)
     text = PROPERTIES.map do |prop|
-      "#{key_camelize(prop)}: #{email.send(prop)}"
+      "#{key_camelize(prop)}: #{value_textize(email.send(prop))}"
     end.join("\n")
 
     bodies = email.body.parts.empty? && [ email.body ] || email.body.parts
-    text << "Body:\n" << bodies.map(&:to_s).join("\n")
+    text << "\nBody:\n" << bodies.map(&:to_s).join("\n")
 
     Mail::Logger.logger.info(text)
   end
 
   def self.key_camelize key
     key.to_s.split(/_+/).map { |t| t[0].upcase + t[1..-1] }.join('-')
+  end
+
+  def self.value_textize value
+    value.is_a?(Array) && value.join(", ") || value
   end
 end
 
