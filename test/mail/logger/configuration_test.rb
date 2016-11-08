@@ -9,8 +9,8 @@ describe Mail::Logger::Configuration do
         end
 
         def self.root
-            Pathname.new(".")
-          end
+          Pathname.new(".")
+        end
       end
     end
 

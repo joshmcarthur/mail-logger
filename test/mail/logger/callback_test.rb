@@ -11,7 +11,8 @@ describe Mail::Logger::Callback do
     end
 
     it "Logs the email" do
-      Mail::Logger.logger.expects(:info).with(subject.inspect).returns(true)
+      sample = "From: \nTo: \nCc: \nBcc: \nSubject: \nMessage-Id: \nMime-Version: \nContent-Type: \nContent-Transfer-Encoding: Body:\n"
+      Mail::Logger.logger.expects(:info).with(sample).returns(true)
       Mail::Logger::Callback.delivered_email(subject)
     end
   end
