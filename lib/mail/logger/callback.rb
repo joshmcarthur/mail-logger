@@ -4,10 +4,12 @@ class Mail::Logger::Callback
   def self.delivered_email(email)
     text = PROPERTIES.map do |prop|
       "#{key_camelize(prop)}: #{value_textize(email.send(prop))}"
-    end.join("\n")
+    end.join("\n") << "\n"
 
-    bodies = email.body.parts.empty? && [ email.body ] || email.body.parts
-    text << "\nBody:\n" << bodies.map(&:to_s).join("\n")
+    if Mail::Logger.configuration.include_body?
+      bodies = email.body.parts.empty? && [ email.body ] || email.body.parts
+      text << "Body:\n" << bodies.map(&:to_s).join("\n")
+    end
 
     Mail::Logger.logger.info(text)
   end

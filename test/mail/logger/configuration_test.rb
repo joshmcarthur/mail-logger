@@ -29,6 +29,10 @@ describe Mail::Logger::Configuration do
     it "Uses the Rails environment to name the file" do
       subject.log_file_name.must_equal "mail_development.log"
     end
+
+    it "Uses the setup value for include body as include body property" do
+      subject.include_body?.must_equal false
+    end
   end
 
   describe "without Rails" do
@@ -42,6 +46,10 @@ describe Mail::Logger::Configuration do
 
     it "Uses a default string to name the file" do
       subject.log_file_name.must_equal "mail.log"
+    end
+
+    it "Uses the setup value for include body as include body property" do
+      subject.include_body?.must_equal false
     end
   end
 end
