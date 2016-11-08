@@ -4,6 +4,17 @@ class Mail::Logger::Configuration
   def initialize
     self.log_path = rails_log_path || File.expand_path("./log")
     self.log_file_name = rails_log_file_name || "mail.log"
+    @include_body = rails_include_body || false
+  end
+
+  def include_body?
+    @include_body
+  end
+
+  def rails_include_body
+    return nil unless defined? Rails
+
+    false
   end
 
   def rails_log_path
